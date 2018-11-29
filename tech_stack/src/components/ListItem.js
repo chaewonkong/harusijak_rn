@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { Text } from "react-native";
-import { CardSection, Card } from "./common";
+import { connect } from "react-redux";
+import { CardSection } from "./common";
+import * as actions from "../actions";
 
 class ListItem extends Component {
   render() {
+    console.log(this.props);
     const { titleStyle } = styles;
     return (
       <CardSection>
@@ -20,4 +23,8 @@ const styles = {
   }
 };
 
-export default ListItem;
+// null <= mapStateToProps 자리임
+export default connect(
+  null,
+  actions
+)(ListItem);

@@ -8,7 +8,6 @@ class LibraryList extends Component {
     return <ListItem library={item} />;
   }
   render() {
-    console.log(this.props.libraries);
     return (
       <FlatList
         data={this.props.libraries}
