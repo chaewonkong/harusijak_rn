@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { View } from "react-native";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import firebase from "firebase";
@@ -14,10 +15,17 @@ class App extends Component {
   render() {
     return (
       <Provider store={createStore(reducers)}>
-        <LoginForm />
+        <View style={styles.container}>
+          <LoginForm />
+        </View>
       </Provider>
     );
   }
 }
 
+const styles = {
+  container: {
+    marginTop: 20
+  }
+};
 export default App;
