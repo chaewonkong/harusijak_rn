@@ -51,5 +51,5 @@ const loginUserSuccess = (dispatch, user) => {
     payload: user
   });
   //  employeeList() function comes from Router/Scene key
-  Actions.employeeList();
+  Actions.main();
 };
