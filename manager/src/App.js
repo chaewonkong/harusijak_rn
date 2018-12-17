@@ -7,6 +7,7 @@ import ReduxThunk from "redux-thunk";
 import reducers from "./reducers";
 import authInfo from "../googleAuth";
 import LoginForm from "./components/LoginForm";
+import Router from "./Router";
 
 class App extends Component {
   componentWillMount() {
@@ -17,9 +18,7 @@ class App extends Component {
     const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
     return (
       <Provider store={store}>
-        <View style={styles.container}>
-          <LoginForm />
-        </View>
+        <Router />
       </Provider>
     );
   }
