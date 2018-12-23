@@ -29,7 +29,8 @@ export const employeeCreate = ({ name, phone, shift }) => {
 };
 
 export const employeesFetch = () => {
-  const currentUser = firebase.auth();
+  const { currentUser } = firebase.auth();
+
   return dispatch => {
     firebase
       .database()
